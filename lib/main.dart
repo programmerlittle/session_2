@@ -55,32 +55,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 tmp.clear();
               },
             ),
-            TextButtonWidget(
-              controller: tmp,
-              buttonLabel: 'Page 3',
-              onPressed: () async {
-                await Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SecondPage(textFromPage1: tmp.text),
-                  ),
-                );
-                tmp.clear();
-              },
-            ),
-            TextButtonWidget(
-              controller: tmp,
-              buttonLabel: 'Page 4',
-              onPressed: () async {
-                await Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SecondPage(textFromPage1: tmp.text),
-                  ),
-                );
-                tmp.clear();
-              },
-            ),
           ],
         ),
       ),
