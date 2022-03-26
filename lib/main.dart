@@ -44,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             TextButtonWidget(
               controller: tmp,
+              buttonLabel: 'Page 2',
               onPressed: () async {
                 await Navigator.push(
                   context,
@@ -53,8 +54,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
                 tmp.clear();
               },
-              buttonLabel: 'Page 2',
-            )
+            ),
+            TextButtonWidget(
+              controller: tmp,
+              buttonLabel: 'Page 3',
+              onPressed: () async {
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SecondPage(textFromPage1: tmp.text),
+                  ),
+                );
+                tmp.clear();
+              },
+            ),
           ],
         ),
       ),
